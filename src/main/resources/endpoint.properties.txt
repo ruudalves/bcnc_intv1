@@ -1,0 +1,4 @@
+#album endpoint
+endpoint.album=https://jsonplaceholder.typicode.com/albums
+#photos endpoint
+endpoint.photos=https://jsonplaceholder.typicode.com/photos
