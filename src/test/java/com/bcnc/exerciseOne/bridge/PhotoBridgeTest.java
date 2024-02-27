@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-public class PhotoBridgeTest {
+class PhotoBridgeTest {
     @Autowired
     private PhotoBridge photoBridge;
 

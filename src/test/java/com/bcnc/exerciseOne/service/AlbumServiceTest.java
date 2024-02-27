@@ -1,15 +1,14 @@
 package com.bcnc.exerciseOne.service;
+
 import org.junit.jupiter.api.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-
-import java.util.Collections;
 
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 @SpringBootTest
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-public class AlbumServiceTest {
+class AlbumServiceTest {
 
     @Autowired
     private AlbumsService albumsService;

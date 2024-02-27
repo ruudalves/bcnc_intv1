@@ -7,8 +7,6 @@ import com.bcnc.exerciseOne.repository.AlbumRepository;
 import com.bcnc.exerciseOne.service.AlbumsService;
 import com.bcnc.exerciseOne.service.PhotosService;
 import org.modelmapper.ModelMapper;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
@@ -21,7 +19,6 @@ import java.util.List;
 @Transactional
 public class AlbumsServiceImpl implements AlbumsService {
 
-    private final Logger log = LoggerFactory.getLogger(AlbumsServiceImpl.class);
     @Autowired
     private AlbumRepository albumRepository;
 
@@ -29,13 +26,20 @@ public class AlbumsServiceImpl implements AlbumsService {
     private AlbumBridge restBridge;
 
 
-    private ModelMapper modelMapper;
+    private final ModelMapper modelMapper;
 
     @Autowired
     private PhotosService photosService;
 
-    public AlbumsServiceImpl() {
+    public AlbumsServiceImpl(){
         this.modelMapper = new ModelMapper();
+    }
+
+
+    public AlbumsServiceImpl(AlbumBridge albumBridge, PhotosService photosService){
+        this.restBridge = albumBridge;
+        this.modelMapper = new ModelMapper();
+        this.photosService = photosService;
     }
 
     @Override
