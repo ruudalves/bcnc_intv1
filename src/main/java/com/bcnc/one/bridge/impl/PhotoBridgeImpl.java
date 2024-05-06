@@ -3,7 +3,6 @@ package com.bcnc.one.bridge.impl;
 import com.bcnc.one.bridge.PhotoBridge;
 import com.bcnc.one.bridge.util.Bridge;
 import com.bcnc.one.bridge.util.EndpointConfig;
-import com.bcnc.one.service.dto.PhotoDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.stereotype.Service;
